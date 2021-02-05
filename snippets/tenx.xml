@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="tenx"
+          fetch="https://github.com/TenX-OS"
+          revision="eleven" />
+
+  <remote name="gitlab"
+          fetch="https://gitlab.com" />
+
+  <remote name="tenx-gitlab"
+          fetch="https://gitlab.com/TenX-OS" />
+
+  <!-- TenX Repos -->
+
+  <!-- Framework repos -->
+  <project path="frameworks/base" name="frameworks_base" remote="tenx" />
+
+  <!-- General repos -->
+  <project path="build/make" name="build_make" remote="tenx">
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" remote="tenx" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="manifest" name="manifest" remote="tenx" />
+
+  <!-- External repos -->
+  <project path="external/pulse" name="android_external_pulse" remote="tenx" />
+
+  <!-- Packages repos -->
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="tenx" />
+  <project path="packages/apps/TenX" name="packages_apps_TenX" remote="tenx" />
+  <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="tenx" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="tenx" />
+
+  <!-- System repos -->
+  <project path="system/core" name="system_core" remote="tenx" />
+  <project path="system/netd" name="system_netd" remote="tenx" />
+
+  <!-- Sepolicy repos -->
+  <project path="device/custom/sepolicy" name="device_custom_sepolicy" remote="tenx" />
+
+  <!-- Vendor repos -->
+  <project path="vendor/aosp" name="vendor_TenX" remote="tenx" />
+  <project path="vendor/support" name="vendor_TenX_support" remote="tenx" />
+  <project path="vendor/overlays/Elegance" name="vendor_overlays_Elegance" remote="tenx" />
+
+</manifest>

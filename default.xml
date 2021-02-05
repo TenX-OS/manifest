@@ -847,4 +847,6 @@
   <!-- Add all PixelExperience repos -->
   <include name="snippets/pixel.xml" />
 
+  <!-- Add all TenX repos -->
+  <include name="snippets/tenx.xml" />
 </manifest>
