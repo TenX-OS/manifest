@@ -30,7 +30,7 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
-  <project path="manifest" name="manifest" remote="tenx" />
+  <project path="manifest" name="manifest_TenX" remote="tenx" />
 
   <!-- External repos -->
   <project path="external/pulse" name="android_external_pulse" remote="tenx" />
