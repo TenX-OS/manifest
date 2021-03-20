@@ -34,6 +34,7 @@
 
   <!-- External repos -->
   <project path="external/pulse" name="android_external_pulse" remote="tenx" />
+  <project path="external/airbnb-lottie" name="external_airbnb-lottie" remote="tenx" />
 
   <!-- Packages repos -->
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="tenx" />
