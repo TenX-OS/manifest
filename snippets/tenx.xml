@@ -37,6 +37,7 @@
   <project path="external/airbnb-lottie" name="external_airbnb-lottie" remote="tenx" />
 
   <!-- Packages repos -->
+  <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="tenx" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="tenx" />
   <project path="packages/apps/TenX" name="packages_apps_TenX" remote="tenx" />
   <project path="packages/apps/CustomDoze" name="packages_apps_CustomDoze" remote="tenx" />
