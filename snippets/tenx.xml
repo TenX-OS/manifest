@@ -43,6 +43,7 @@
   <project path="packages/apps/CustomDoze" name="packages_apps_CustomDoze" remote="tenx" />
   <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="tenx" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" remote="tenx" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="tenx" />
 
   <!-- System repos -->
   <project path="system/core" name="system_core" remote="tenx" />
