@@ -45,6 +45,7 @@
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="tenx" />
   <project path="packages/apps/TenX" name="packages_apps_TenX" remote="tenx" />
   <project path="packages/apps/CustomDoze" name="packages_apps_CustomDoze" remote="tenx" />
+  <project path="packages/apps/Updates" name="packages_apps_Updates" remote="tenx" />
   <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="tenx" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" remote="tenx" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="tenx" />
