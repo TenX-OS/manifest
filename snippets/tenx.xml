@@ -15,6 +15,7 @@
 
   <!-- Framework repos -->
   <project path="frameworks/base" name="frameworks_base" remote="tenx" />
+  <project path="frameworks/av" name="frameworks_av" remote="tenx" />
 
   <!-- General repos -->
   <project path="build/make" name="build_make" remote="tenx">
@@ -35,6 +36,9 @@
   <!-- External repos -->
   <project path="external/pulse" name="android_external_pulse" remote="tenx" />
   <project path="external/airbnb-lottie" name="external_airbnb-lottie" remote="tenx" />
+
+  <!-- Hardware repos -->
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="tenx" />
 
   <!-- Packages repos -->
   <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="tenx" />
