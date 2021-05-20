@@ -5,6 +5,10 @@
           fetch="https://github.com/TenX-OS"
           revision="eleven" />
 
+  <remote name="tenx-devices"
+          fetch="https://github.com/Ten-X-Devices"
+          revision="eleven" />
+
   <remote name="gitlab"
           fetch="https://gitlab.com" />
 
