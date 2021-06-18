@@ -57,6 +57,7 @@
 
   <!-- Sepolicy repos -->
   <project path="device/custom/sepolicy" name="device_custom_sepolicy" remote="tenx" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="tenx" />
 
   <!-- Vendor repos -->
   <project path="vendor/aosp" name="vendor_TenX" remote="tenx" />
