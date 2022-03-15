@@ -12,7 +12,7 @@ familiar with [Git and Repo](http://source.android.com/source/using-repo.html).
 To initialize your local repository using the TenX trees, use a command like this:
 
 ```bash
-repo init -u git://github.com/TenX-OS/manifest_TenX -b eleven
+repo init -u https://github.com/TenX-OS/manifest_TenX -b eleven
 ```
 Then to sync up:
 ```bash
