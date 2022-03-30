@@ -2,7 +2,6 @@
 <manifest>
 
   <!-- External repos -->
-  <project path="external/faceunlock" name="external_faceunlock" remote="pixel-gitlab-self-hosted" />
   <project path="external/bson" name="external_bson" remote="pixel" />
   <project path="external/connectivity" name="external_connectivity" remote="pixel" />
   <project path="external/exfatprogs" name="external_exfatprogs" remote="pixel" />

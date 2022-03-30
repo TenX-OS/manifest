@@ -38,6 +38,7 @@
   <project path="manifest" name="manifest_TenX" remote="tenx" />
 
   <!-- External repos -->
+  <project path="external/faceunlock" name="android_external_faceunlock" remote="tenx" />
   <project path="external/pulse" name="android_external_pulse" remote="tenx" />
   <project path="external/airbnb-lottie" name="external_airbnb-lottie" remote="tenx" />
 
