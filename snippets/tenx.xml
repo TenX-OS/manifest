@@ -13,7 +13,8 @@
           fetch="https://gitlab.com" />
 
   <remote name="tenx-gitlab"
-          fetch="https://gitlab.com/TenX-OS" />
+          fetch="https://gitlab.com/TenX-OS"
+          revision="eleven" />
 
   <!-- TenX Repos -->
 
