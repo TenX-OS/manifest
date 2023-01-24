@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="tenx"
+          fetch="https://github.com/TenX-OS"
+          revision="thirteen" />
+
+  <remote name="tenx-devices"
+          fetch="https://github.com/Ten-X-Devices"
+          revision="thirteen" />
+
+  <remote name="gitlab"
+          fetch="https://gitlab.com" />
+
+  <remote name="tenx-gitlab"
+          fetch="https://gitlab.com/TenX-OS"
+          revision="thirteen" />
+
+  <!-- TenX Repos -->
+
+  <!-- Framework repos -->
+  <project path="frameworks/av" name="frameworks_av" remote="tenx" />
+  <project path="frameworks/native" name="frameworks_native" remote="tenx" />
+
+   <!-- General repos -->
+  <project path="art" name="art" remote="tenx" />
+  <project path="bionic" name="bionic" remote="tenx" />
+  <project path="build/make" name="build" remote="tenx">
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" remote="tenx" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <project path="device/custom/sepolicy" name="device_custom_sepolicy" remote="tenx" />
+  <project path="manifest" name="manifest_TenX" remote="tenx" />
+
+  <!-- System repos -->
+  <project path="system/core" name="system_core" remote="tenx" />
+  <project path="system/netd" name="system_netd" remote="tenx" />
+
+  <!-- Sepolicy repos -->
+  <project path="device/custom/sepolicy" name="device_custom_sepolicy" remote="tenx" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="tenx" />
+
+  <!-- Vendor repos -->
+  <project path="vendor/aosp" name="vendor_TenX" remote="tenx" />
+  <project path="vendor/support" name="vendor_TenX_support" remote="tenx" />
+
+</manifest>
