@@ -1201,4 +1201,6 @@
   <include name="snippets/pixel-extras.xml" />
   <include name="snippets/pixel-caf.xml" />
 
+  <!-- Add all TenX repos -->
+  <include name="snippets/tenx.xml" />
 </manifest>

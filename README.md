@@ -1,32 +1,29 @@
-# Pixel Experience #
+TenX
+========
 
-### Sync ###
+<img src="https://github.com/TenX-OS/TenX_docs/blob/master/banner/banner.png?raw=true">
+
+Getting Started
+---------------
+
+To get started with Android, you'll need to get
+familiar with [Git and Repo](http://source.android.com/source/using-repo.html).
+
+To initialize your local repository using the TenX trees, use a command like this:
 
 ```bash
-
-# Initialize local repository
-repo init -u https://github.com/PixelExperience/manifest -b thirteen
-
-# Sync
+repo init -u git://github.com/TenX-OS/manifest_TenX -b thirteen
+```
+Then to sync up:
+```bash
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
 
-### Build ###
-
+Building the source
+---------------
 ```bash
-
-# Set up environment
-$ . build/envsetup.sh
-
-# Choose a target
-$ lunch aosp_$device-userdebug
-
-# Build the code
-$ mka bacon -jX
+. build/envsetup.sh
+lunch aosp_<device>-userdebug
+make bacon -j8 (or) brunch <device>
 ```
-
-### Submitting Patches ###
-
-Patches are always welcome! Please submit your patches to our Gerrit.
-
-[Gerrit push guide](https://wiki.pixelexperience.org/help/submit-patch/)
+Apply for official maintainership [**HERE**](https://forms.gle/apbQYVAQhwxiV7nH7)
