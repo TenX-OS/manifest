@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="tenx"
+          fetch="https://github.com/TenX-OS"
+          sync-c="true"
+          sync-j="4"
+          revision="refs/heads/fourteen" />
+
+  <remote name="tenx-udc"
+          fetch="https://github.com/TenX-UDC"
+          sync-c="true"
+          sync-j="4"
+          revision="refs/heads/fourteen" />
+
+  <remote name="tenx-gitlab"
+          fetch="https://gitlab.com/tenx-os"
+          sync-c="true"
+          sync-j="4"
+          revision="refs/heads/tenx" />
+
+  <!-- Framework repos -->
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="tenx" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="tenx" />
+  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="tenx" />
+
+  <!-- General repos -->
+  <project path="build/make" name="build_make" groups="pdk,sysui-studio" remote="tenx" >
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="tenx" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="android" name="manifest" remote="tenx" />
+  <project path="lineage-sdk" name="lineage-sdk" remote="tenx" />
+  <project path="art" name="art" remote="tenx" groups="pdk" />
+
+  <!-- External repos -->
+  <project path="external/FadingEdgeLayout" name="external_FadingEdgeLayout" remote="tenx" />
+  <project path="external/jemalloc_new" name="external_jemalloc-new" groups="pdk" remote="tenx" />
+
+  <!-- Packages repos -->
+  <project path="packages/apps/LineageParts" name="packages_apps_LineageParts" remote="tenx" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="tenx" />
+  <project path="packages/apps/TenX" name="packages_apps_TenX" remote="tenx" />
+  <project path="packages/overlays/Lineage" name="packages_overlays_Lineage" remote="tenx" />
+  <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="tenx" />
+  <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="tenx" />
+  <project path="packages/apps/CustomDoze" name="packages_apps_CustomDoze" remote="tenx" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="tenx" />
+  <project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="tenx-gitlab" />
+
+  <!-- System repos -->
+  <project path="system/core" name="system_core" groups="pdk" remote="tenx" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="tenx" />
+
+  <!-- Device repos -->
+  <project path="device/lineage/sepolicy" name="device_tenx_sepolicy" remote="tenx" />
+
+  <!-- Vendor repos -->
+  <project path="vendor/lineage" name="vendor_tenx" remote="tenx" />
+  <project path="vendor/support" name="vendor_tenx_support" remote="tenx" />
+  <project path="vendor/overlays/Elegance" name="vendor_overlays_Elegance" remote="tenx" />
+  <project path="vendor/google/overlays/ThemeIcons" name="vendor_google_overlays_ThemeIcons" remote="tenx" />
+  <project path="vendor/extra" name="vendor_extra" remote="tenx" />
+
+  <!-- bionic -->
+  <project path="bionic" name="bionic" groups="pdk" remote="tenx" />
+
+  <!-- hardware repos -->
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="tenx" groups="pdk,sysui-studio" />
+  <project path="hardware/lineage/compat" name="hardware_lineage_compat" remote="tenx" />
+
+  <!-- gms -->
+  <project path="vendor/gms" name="vendor_gms" remote="tenx-gitlab" clone-depth="1" />
+
+</manifest>
