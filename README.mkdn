@@ -1,36 +1,86 @@
-LineageOS
-===========
+TenX
+========
 
-Getting started
+
+<img src="https://github.com/TenX-OS/TenX_docs/blob/master/banner/banner.png?raw=true">
+
+
+### Getting started ###
 ---------------
 
-To get started with Android/LineageOS, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
+To get started with Android/TenX-OS, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
 
-To initialize your local repository using the LineageOS trees, use a command like this:
+To initialize your local repository using the TenX-OS trees, use a command like this:
 ```
-repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
+repo init -u https://github.com/TenX-OS/manifest.git -b fourteen --git-lfs
 ```
 Then to sync up:
 ```
 repo sync
 ```
+
+Run to build
+```
+$ . build/envsetup.sh
+# ... now run
+$ brunch devicecodename buildtype
+```
+
+### Build Flags ###
+
+```bash
+# UDFPS support
+TARGET_HAS_UDFPS := true
+
+# Blur
+TARGET_ENABLE_BLUR := true
+
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# BCR (Call recording)
+TARGET_PREBUILT_BCR := true
+
+# build Lawnchair with QUICK switch (Pixel launcher by default)
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+
+# Custom package installer
+TARGET_USE_CUSTOM_PACKAGE_INSTALLER := true
+
+# Build google recorder
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+
+# Exclude Aperture camera
+PRODUCT_NO_CAMERA := true
+```
+
+### Overlays For systeminfo and maintainer name ###
+First 2 commit
+
+https://github.com/Aston-Martinn/device_asus_sdm660-common/commits/fourteen/
+
+Credits
+---------------
+* [**AOSPA**](https://github.com/AOSPA)
+* [**AICP**](https://github.com/AICP)
+* [**Bootleggers**](https://github.com/BootleggersROM)
+* [**crDroid**](https://github.com/crdroidandroid)
+* [**Corvus-AOSP**](https://github.com/Corvus-R)
+* [**Derpfest**](https://github.com/Derpfest-12)
+* [**DotOS**](https://github.com/DotOS)
+* [**Evolution-X**](https://github.com/Evolution-X)
+* [**Flamingo-OS**](https://github.com/Flamingo-OS)
+* [**LineageOS**](https://github.com/LineageOS)
+* [**Octavi-OS**](https://github.com/Octavi-OS)
+* [**Omnirom**](https://github.com/omnirom)
+* [**PixelDust Caf**](https://github.com/pixeldust-project-caf)
+* [**Project-Fluid**](https://github.com/Project-Fluid)
+* [**Project Kaleidoscope**](https://github.com/Project-Kaleidoscope)
+* [**Project Radiant**](https://github.com/ProjectRadiant)
+* [**ProjectInfinity-X**](https://github.com/ProjectInfinity-X)
+* [**SparkOS**](https://github.com/Spark-Rom)
+* [**StagOS**](https://github.com/StagOS)
+* [**Xdroid-OSS**](https://github.com/xdroid-oss)
+* [**RisingOOS**](https://github.com/RisingTechOSS)
+
 Please see the [LineageOS Wiki](https://wiki.lineageos.org/) for building instructions, by device.
-
-
-Submitting patches
-------------------
-Patches are always welcome! Please submit your patches via LineageOS Gerrit!
-
-Simply follow our guide on [how to submit patches](https://wiki.lineageos.org/submitting-patch-howto.html).
-
-To view the status of your and others' patches, visit [LineageOS Gerrit Code Review](https://review.lineageos.org/).
-
-
-Buildbot
---------
-
-All supported devices are built weekly and periodically as changes are committed to ensure the source trees remain buildable.
-
-You can view the current build statuses at [LineageOS Buildkite](https://buildkite.com/lineageos).
-
-Builds produced weekly by the buildbot can be downloaded from [LineageOS downloads](https://download.lineageos.org/).
